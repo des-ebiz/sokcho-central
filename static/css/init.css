@@ -1,0 +1,351 @@
+@charset "utf-8";
+@import url(https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+body {font-family: 'NanumSquare', 'Malgun Gothic', sans-serif; letter-spacing: -0.5px; color: #434343;}
+img {max-width: 100%;}
+
+/*-bxSlider 재정의-*/
+.bx-wrapper,
+.bx-wrapper .bx-viewport {position: relative; margin: 0 auto; border: none; box-shadow: none; background: none;}
+.bx-controls {display: none;}
+
+/* 공통 */
+.f-bd {font-weight: 700;}
+.f-bdr {font-weight: 800;}
+.c-blue {color: #008aff;}
+
+/* header */
+.header {z-index: 999; position: fixed; box-sizing: border-box; width: 100%; top: 0; left: 0; padding: 23px 0 24px; background: #b42015;}
+.header .header-area {position: relative; box-sizing: border-box; width: 1180px; margin: 0 auto;}
+.header .logo {float: left;}
+.header .logo a {position: relative; display: block; color: #fff;}
+.header .logo a * {position: relative; vertical-align: middle; text-shadow: 3px 3px 4px rgba(10, 2, 4, 0.25);}
+.header .logo em {display: inline-block; margin-top: -2px; font-size: 30px; font-weight: 700; letter-spacing: -1px; line-height: 30px;}
+.header .logo .logo-txt {display: inline-block; margin-left: 15px; font-size: 16px; line-height: 16px; font-weight: 700; letter-spacing: -1px;}
+.header .logo .logo-txt span {display: block; font-size: 11px; font-weight: 800; /*text-transform: uppercase;*/}
+.header .gnb {float: right; margin-top: 8px;}
+.header .gnb .menu {}
+.header .gnb .menu li {float: left;}
+.header .gnb .menu li a {position: relative; display: block; padding: 0 11px 0 18px; font-size: 18px; font-weight: 700; line-height: 18px; color: #fff;}
+.header .gnb .menu li.on a, .header .gnb .menu li a:hover {color: #ffe400;}
+.header .gnb .menu li a:before {content: ""; position: absolute; display: block; width: 7px; height: 7px; top:50%; left: 0; margin-top: -4px; border-radius: 100%; background: #fff;}
+.header .gnb .menu li:first-child a:before {content: none;}
+
+/* footer */
+.footer {position: relative; box-sizing: border-box; width: 100%; padding: 35px 0 45px; background: #575757;}
+.footer .footer-area {position: relative; /*width: 1180px;*/ margin: 0 auto; text-align: center; color: #fff;}
+.footer .logo {display: block; font-size: 22px; font-weight: 700; line-height: 22px;}
+.footer .logo span {display: block; font-size: 11px; font-weight: 800;}
+.footer .f-txt-box {}
+.footer .f-txt-box .p-0 {margin: 15px auto; font-size: 18px; line-height: 26px;}
+.footer .f-txt-box address {font-size: 15px; line-height: 24px;}
+.footer .f-txt-box address p {}
+.footer .f-txt-box address .p-1 {}
+.footer .f-txt-box address .p-2, .footer .f-txt-box address small {letter-spacing: -0.1px;}
+
+
+/* 메인, 푸드윈도 공통 타이틀 */
+.con-tit {position: relative; box-sizing: border-box; width: 1180px; margin: 0 auto 35px; padding-left:22px; font-size: 26px; letter-spacing: -0.9px;}
+.con-tit [class*=row-] {display: block;}
+.con-tit .row-1 {line-height: 1;}
+.con-tit .row-2 {font-size: 40px; margin-top: 2px;}
+.con-tit .sokcho {font-size: 16px; display: inline-block; text-indent: 2px; margin-left: 3px;}
+.con-tit:before {content: ""; position: absolute; left: 0; display: inline-block; width: 7px; height: 73px; background: #c0c0c0; vertical-align: middle; margin-right: 10px;}
+
+
+/* 메인 */
+.Main section {position: relative;}
+
+/* 메인 비주얼 영역 */
+.Main .visual {background: rgba(0, 0, 0, 0.8);}
+.Main .visual .bg-visual {z-index: 1;}
+.Main .visual .slide {box-sizing: border-box; color: #fff; width: 100%; height: 100%; box-sizing: border-box;}
+.Main .visual .slide-1:before {background: #eee url(http://img.sokcho-central.co.kr/bg_visual_1.jpg) no-repeat center; background-size: cover;}
+.Main .visual .slide-2:before {background: #eee url(http://img.sokcho-central.co.kr/bg_visual_2.jpg)  no-repeat center; background-size: cover;}
+.Main .visual .slide:before {content: ""; display: block; position: absolute; width: 100%; height: 100%; left: 0; top: 0;
+	-webkit-transition: all 5.5s 0.1s;
+	-ms-transition: all 5.5s 0.1s;
+	-o-transition: all 5.5s 0.1s;
+	transition: all 5.5s 0.1s;
+}
+/*.Main .visual .bg-visual {position: absolute; width: 100%; height: 100%; top:0; left:0;}
+.Main .visual .bg-visual img {z-index: 1; display: none; position: absolute; width: 100%; height: 100%; top:0; left:0;}
+.Main .visual .bg-visual img:first-child {z-index: 2; display: block;}*/
+.Main .visual .visual-txt-box {z-index: 10; position: absolute; box-sizing: border-box; width: 100%; height: 100%; top: 0; left: 0; margin: 0 auto; margin-top: 0; text-align: center; color: #fff;}
+.Main .visual .visual-txt {position: relative; box-sizing: border-box; width: 100%; top: 50%; left: 0; margin: 0 auto; margin-top: -150px;}
+.Main .visual .visual-txt p {position: relative;}
+.Main .visual .visual-txt h2, .Main .visual .visual-txt .p-1, .Main .visual .visual-txt .p-2 {text-shadow: 3px 3px 4px rgba(10, 2, 4, 0.29);}
+.Main .visual .visual-txt h2 {position: relative; margin: 15px auto 14px; font-size: 74px; line-height: 74px; letter-spacing: -1px;}
+.Main .visual .visual-txt .p-1 {font-size: 30px; font-weight: 700; line-height: 42px; letter-spacing: -1px;}
+.Main .visual .visual-txt .p-2 {display: inline-block; height: 32px; padding: 0 15px 0 18px; font-size: 18px; line-height: 32px; font-weight: 700; background: #c90e0e;}
+.Main .visual .visual-txt .p-3 {margin-top: 26px; font-size: 24px; line-height: 34px;}
+
+.Main .visual .weather {z-index: 99; position: absolute; width: 1180px; top: 75px; left: 50%; margin-left: -600px;}
+.Main .visual .weather .area {position: absolute; right: 5px; height: 96px; padding-left: 20px; box-sizing: border-box;}
+.Main .visual .weather .area [class*=s-] {display: block; color: #fff; font-size: 20px;}
+.Main .visual .weather .area .inner,
+.Main .visual .weather .area img {position: relative; float: right;}
+.Main .visual .weather .area .inner {}
+.Main .visual .weather .area .s-1 {line-height: 1;}
+.Main .visual .weather .area .s-2 {margin-top: 3px; font-weight: 700;}
+.Main .visual .weather .area .s-2 .t-1 {position: relative; top: -1px;}
+.Main .visual .weather .area .s-3 {font-size: 30px;}
+.Main .visual .weather .area .s-3 .big {font-size: 44px;}
+.Main .visual .weather .area .s-3 .c {font-family: "Noto Sans KR";}
+
+/* 메인 서브 공통영역 */
+.Main section[class*=scr-move] {box-sizing: border-box; margin: 0 auto; padding: 46px 0 60px;}
+.Main .con-area {position: relative; box-sizing: border-box; width: 1180px; margin: 0 auto;}
+
+/* 속초중앙시장 소개 */
+.Main section.about {padding-bottom: 25px; background: #fffeed;}
+.Main .about .about-box {margin-bottom: 36px;}
+.Main .about .about-box .about-img {position: relative; float: left; box-sizing: border-box; width: 40%;}
+.Main .about .about-box .about-img img {position: relative; width: 100%; border: 1px solid #bdbaae;}
+.Main .about .about-box .txt-box {position: relative; float: left; box-sizing: border-box; width: 60%; margin-top: 20px; padding-left: 37px; line-height: 30px;}
+.Main .about .about-box .txt-box.last {margin-top: 30px;}
+.Main .about .about-box .txt-box dt {margin-bottom: 10px; font-size: 30px; color: #c90e0e;}
+.Main .about .about-box .txt-box dd {font-size: 20px; word-break: keep-all;}
+.Main .about .about-box.fl-r .about-img {float: right;}
+.Main .about .about-box.fl-r .txt-box {padding-left: 0; padding-right: 37px; text-align: right;}
+
+/* 중앙시장 안내 */
+.Main section.guide {background: #fff;}
+.Main .guide .guide-box .guide-img img {position: relative; width: 100%;}
+.Main .guide .guide-box .txt-box {position: relative; display: table; margin-top: 23px; line-height: 26px;}
+.Main .guide .guide-box .txt-box dt {display: table-cell; padding-top: 2px; width: 185px; font-size: 26px; color: #e21000;}
+.Main .guide .guide-box .txt-box dd {display: table-cell; font-size: 16px;}
+.Main .guide .guide-box .txt-box .txt-list {}
+.Main .guide .guide-box .txt-box .txt-list li {position: relative; float: left; padding-right: 25px;}
+.Main .guide .guide-box .txt-box .line-list {}
+.Main .guide .guide-box .txt-box .line-list li {position: relative; display: table; margin-top: 7px;}
+.Main .guide .guide-box .txt-box .line-list li:first-child {margin-top: 0;}
+.Main .guide .guide-box .txt-box .line-list li .line-tit {position: relative; display: table-cell; padding: 0 5px 0 10px;}
+.Main .guide .guide-box .txt-box .line-list li .line-tit:before {content: ''; display: block; position: absolute; width: 5px; height: 1px; top: 11px; left: 0; background: #858585;}
+.Main .guide .guide-box .txt-box .line-list li .line-txt {display: table-cell;}
+
+/* 주변관광 안내 */
+.Main section.tourist {background: #f6f6f6;}
+.Main .tourist {}
+.Main .tourist .area {}
+.Main .tourist .area .h4-tit {position: relative;font-size: 26px; margin: 30px 0 15px;}
+.Main .tourist .area .h4-tit > * {vertical-align: top;}
+.Main .tourist .area .h4-tit .sokcho {text-transform: uppercase; font-size: 16px; display: inline-block; text-indent: 2px; margin-top: 5px;}
+.Main .tourist .area .h4-tit:before {content: ""; display: inline-block; width: 10px; height: 25px; background: #c0c0c0; vertical-align: middle; margin-right: 10px;}
+.Main .tourist .area .list + .list {margin-top: 20px;}
+.Main .tourist .area .list > li {float: left; width: 280px; margin-left: 20px; overflow: hidden;}
+.Main .tourist .area .list > li:first-child {margin-left: 0;}
+.Main .tourist .area .list > .link-tour {cursor:pointer}
+.Main .tourist .area .list > li .tour-img {border: 1px solid #a19e9f; width: 280px; height: 160px; box-sizing: border-box;}
+.Main .tourist .area .list > li dl {margin-top: 15px; letter-spacing: -0.9px;}
+.Main .tourist .area .list > li dl dt {font-size: 15px; color: 0; padding-bottom: 10px; margin-bottom: 10px; border-bottom: 1px solid #c8c8c8; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.Main .tourist .area .list > li dl dt h5 {margin-bottom: 4px; font-size: 22px; color: #008ead; font-weight: 700;}
+.Main .tourist .area .list > li dl dd {font-size: 16px; color: #4c4c4c; line-height: 1.7;}
+
+/* 속초8경, 고성8경 */
+.Main section.view {padding-bottom: 70px; background: #fff;}
+.Main .view-box {position: relative; padding-top: 80px;}
+.Main .view-box:first-child {padding-top: 30px;}
+.Main .view .tit {text-align: center;}
+.Main .view .tit .sokcho {text-transform: uppercase; font-size: 18px; display: inline-block; text-indent: 2px; margin-bottom: 2px; background: #fff; border: 2px solid #61a0c8; padding: 8px 9px 6px; line-height: 1;}
+.Main .view .tit .sokcho-2 {font-size: 18px;}
+.Main .view .tit .big {display: block; letter-spacing: -1px; margin-top: 5px; font-size: 40px;} 
+.Main .view .p-0, .Main .view .p-1 {margin-top: 7px; font-size: 20px; line-height: 32px; text-align: center; color: #434343;}
+.Main .view .p-1 {margin-top: 10px;}
+.Main .view .area {margin-top: 12px;}
+.Main .view .area .list > li {float: left; box-sizing: border-box; width: 25%; margin-top: 14px; /*margin-top: 28px;*/ padding-left: 10px; overflow: hidden;}
+.Main .view .area .list > li:first-child {margin-left: 0;}
+.Main .view .area .list > li .tour-img {box-sizing: border-box; text-align: center;}
+.Main .view .area .list > li dl {margin-top: 15px; letter-spacing: -0.9px;}
+.Main .view .area .list > li dl dt {font-size: 15px; color: 0; padding-bottom: 10px; margin-bottom: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.Main .view .area .list > li dl dt h5 {font-size: 22px; font-weight: 700; color: #000; text-align: center; padding-top: 1px;}
+.Main .view .area .list > li dl dt h5 .num {position: relative; top: -1px;background: #1d5e87; color: #fff; display: inline-block; width: 32px; height: 32px; border-radius: 50%; line-height: 1.5; vertical-align: middle; font-weight: 400;}
+.Main .view .area .list > li dl dd {overflow: hidden; position: relative; display: block; padding: 0 3px; font-size: 17px; color: #4c4c4c; line-height: 24px; letter-spacing: -1px; /*text-overflow: ellipsis;*/ word-wrap: break-word; word-break: keep-all;}
+
+.Main .view .view-map {position:relative; overflow: hidden; width: 100%; margin: 23px auto 28px; box-sizing: border-box;}
+.Main .view .view-map img {width:100%}
+.Main .view-box:first-child .view-map {border: 1px solid #a29fa0; border-radius: 15px;}
+.Main .view .map-txt {font-size:18px; line-height:24px; text-align:center; letter-spacing:-1px; color:#434343}
+
+/* 오시는 길 */
+.Main section.waycome {padding-bottom: 95px; background: #f6f6f6;}
+.Main .waycome [class*=way-] {position: relative;}
+.Main .waycome .way-map {float: left; box-sizing: border-box; width: 50%;}
+.Main .waycome .way-map img {border: 1px solid #c9cacc;}
+
+.Main .waycome .way-info {float: right; box-sizing: border-box; width: 50%; padding-left: 40px;}
+.Main .waycome .way-info .p-1 {position: relative; margin-top: 30px; font-size: 26px; font-weight: 700; margin-bottom: 3px;}
+.Main .waycome .way-info .p-1:before {content: ""; display: inline-block; width: 10px; height: 25px; background: #c0c0c0; vertical-align: middle; margin-right: 10px; margin-top: -1px;}
+.Main .waycome .way-info .p-1:first-child {margin-top: 0;}
+.Main .waycome .way-info dl {font-size: 20px; line-height: 1.65; letter-spacing: -0.9px;}
+.Main .waycome .way-info dt, .contents .waycome .way-info dd {padding-left: 20px;}
+.Main .waycome .way-info dt {font-weight: 700; margin-top: 18px;}
+.Main .waycome .way-info dd {}
+.Main .waycome .way-info dd p.dot {position: relative; padding-left: 12px;}
+.Main .waycome .way-info dd p.dot:before {content: "-"; display: inline-block; position: absolute; left: 0;}
+.Main .waycome .way-info .row-btn {margin-top: 35px; padding-left: 10px;}
+.Main .waycome .way-info .row-btn a:first-child {margin-right: 10px;}
+
+/* 푸드윈도 */
+.Food {}
+.Food .food-wrap {padding: 72px 0 95px;}
+.Food .food-wrap .con-tit {margin-bottom: 0;}
+.Food .food-wrap .con-area {position: relative; box-sizing: border-box; width: 1180px; margin: 0 auto;}
+.Food .food-wrap .food-list-box {}
+.Food .food-wrap .food-list-box .list {}
+.Food .food-wrap .food-list-box .list li {cursor: pointer; float: left; box-sizing: border-box; width: 24%; margin: 40px 0 0 1.3%; overflow: hidden;}
+.Food .food-wrap .food-list-box .list li.ml-0 {margin-left: 0;} /* 1127 수정사항 적용 후 제거 */
+.Food .food-wrap .food-list-box .list li:first-child, .Food .food-wrap .food-list-box .list li:nth-child(4n+1) {margin-left: 0}
+.ie8 .Food .food-wrap .food-list-box .list li.nth-1, .ie8 .Food .food-wrap .food-list-box .list li.nth-5, .ie8 .Food .food-wrap .food-list-box .list li.nth-9 {margin-left: 0}
+.Food .food-wrap .food-list-box .list li .tour-img {position: relative; box-sizing: border-box; text-align: center;}
+.Food .food-wrap .food-list-box .list li .tour-img img {position: relative; box-sizing: border-box; width: 100%; border:1px solid #a8a5a6; border-radius: 1px;}
+.Food .food-wrap .food-list-box .list li dl {margin-top: 15px; letter-spacing: -1px;}
+.Food .food-wrap .food-list-box .list li dl dt {padding-bottom: 13px; border-bottom: 1px solid #c9c9c9;}
+.Food .food-wrap .food-list-box .list li dl dt h5 {font-size: 22px; line-height: 22px; font-weight: 700; color: #000; text-align: left; color: #008ead;}
+.Food .food-wrap .food-list-box .list li dl dd {overflow: hidden; position: relative; display: block; padding-top: 15px;}
+.Food .food-wrap .food-list-box .list li dl dd p {padding: 0 3px; font-size: 16px; line-height: 24px; word-wrap: break-word; word-break: keep-all; color: #4c4c4c;}
+.Food .food-wrap .food-list-box .list li dl dd .btn-link {position: relative; display: block; width: 100%; height: 40px; margin-top: 17px; font-size: 18px; font-weight: 700; text-align: center; line-height: 40px; color: #fff; background: #9db3c3;}
+
+
+/* 게시판 */
+.Board .board-box .tit {font-size: 34px;}
+.Board .board-box .tit .sokcho {text-transform: uppercase; font-size: 16px; display: block; text-indent: 2px; margin-bottom: 2px;}
+
+/* 게시판 비주얼 영역 */
+.Board .subVisual {padding-top: 74px; box-sizing: border-box; color: #fff; height: 243px;}
+.Board .subVisual .mainTxt {text-align: center;}
+.Board .subVisual .mainTxt > * {text-shadow: 3px 3px 2px rgba(0,0,0, .25); letter-spacing: -0.7px;}
+.Board .subVisual .mainTxt .p-1 {font-size: 22px;font-weight: 700;}
+.Board .subVisual .mainTxt h2 {font-size: 54px; margin-top: 5px; letter-spacing: -2px; line-height: 1.2;}
+.Board .subVisual .mainTxt .p-2 {font-size: 16px; margin-top: 5px; text-transform: uppercase;}
+
+/* 게시판 list */
+.Board .board-area {position: relative; box-sizing: border-box; min-height: 530px; margin-top: 60px; padding-bottom: 50px;}
+.Board .board-area .board-box {position: relative; width: 1180px; margin: 0 auto;}
+.Board .board-area .tb-list {position: relative; width: 100%; font-size: 18px;}
+.Board .board-area .tb-list col.nth-1 {width: 10%;}
+.Board .board-area .tb-list col.nth-2 {width: 75%;}
+.Board .board-area .tb-list col.nth-3 {width: 15%;}
+.Board .board-area .tb-list th, .Board .board-area .tb-list td {padding: 15px 0px; text-align: center;}
+.ie8 .Board .board-area .tb-list td:first-child + td,
+.Board .board-area .tb-list td:nth-child(2) {text-align: left;}
+.Board .board-area .tb-list thead tr {background: #f2f2f2; border-top: 1px solid #3c3b3b; border-bottom: 1px solid #d9d9d9;}
+.Board .board-area .tb-list tbody tr {border-bottom: 1px solid #d9d9d9;}
+.Board .board-area .tb-list tbody tr a {display: block;}
+.Board .board-area .pagenation {text-align: center; font-size: 0; margin-top: 50px;}
+.Board .board-area .pagenation a {display: inline-block; font-size: 13px; width: 32px; height: 32px; vertical-align: middle; line-height: 2.3em; border: 1px solid #d9d9d9; border-left: 0; color: #d2d2d2; font-family: "Nanum Gothic"; font-weight: 600; }
+.Board .board-area .pagenation a:nth-child(2) {border-left: 1px solid #d9d9d9;}
+.Board .board-area .pagenation a[class*="prev"], .Board .board-area .pagenation a[class*="next"] {font-size: 12px; line-height: 2.5em; letter-spacing: -2px;}
+.Board .board-area .pagenation a:hover, .Board .board-area .pagenation a.on {background: #d2d2d2; color: #fff;}
+.Board .board-area .pagenation a.prev, .Board .board-area .pagenation a.next {background: #d2d2d2; color: #595959;}
+.Board .board-area .pagenation a.prev {text-indent: -4px; margin-right: 5px;}
+.Board .board-area .pagenation a.next {text-indent: 1px; margin-left: 5px;}
+
+/* 게시판 read */
+.Board .board-area .tb-read {font-size: 18px; width: 100%;}
+.Board .board-area .tb-read th {padding: 15px 10px 15px 25px; font-size: 20px;}
+.Board .board-area .tb-read td {padding: 40px; line-height: 1.8;}
+.Board .board-area .tb-read thead tr {background: #f2f2f2; border-top: 1px solid #3c3b3b; border-bottom: 1px solid #d9d9d9;}
+.Board .board-area .tb-read tbody tr {border-bottom: 1px solid #d9d9d9;}
+.Board .board-area .tb-read thead tr th .flt-r {float: right;}
+.Board .board-area .row-btn {margin-top: 30px; text-align: center;}
+.Board .board-area  .pagenation + .row-btn {margin-top: 0;}
+.Board .board-area .row-btn .btn-list {display: inline-block; font-size: 20px; border: 1px solid #b7b7b7; border-radius: 25px; padding: 8px 62px;}
+.Board .board-area .row-btn .left {float: left;}
+.Board .board-area .row-btn .right {float: right;}
+.Board .board-area .row-btn [class*=btn-] {background: #fff; border: 1px solid #b0b0b0; line-height: 1; padding: 11px 35px; border-radius: 30px; font-size: 20px; color: #676767; letter-spacing: -1px; min-width: 124px;}
+.Board .board-area .row-btn [class*=btn-]:first-child + button {margin-left: 10px;}
+.Board .board-area .pagenation + .row-btn .btn-write {position: absolute; right: 0; bottom: 0;}
+.Board .board-area .row-search {text-align: center;}
+.Board .board-area .row-search {margin-top: 20px;}
+.Board .board-area .row-search > * {position: relative; display: inline-block; height: 37px; border: 1px solid #c8c8c8; background: #fff; box-sizing: border-box; vertical-align: middle; padding: 0 5px; font-size: 16px; line-height: 1; font-family: "Nanum Square", sans-serif; vertical-align: top; border-radius: 2px;}
+.Board .board-area .row-search .sltDiv {padding: 0; width: 120px; overflow: hidden;}
+.Board .board-area .row-search .sltDiv:after {content: "▼"; position: absolute; right: 10px; top: 9px; color: #acacac; pointer-events: none;}
+.Board .board-area .row-search .sltDiv .sltArr {}
+.Board .board-area .row-search .category {position: absolute; left: 0; top: 0; padding-left: 10px; width: 100%; border: 0; font-size: 16px; height: 100%; width: 150px;}
+.Board .board-area .row-search .category:focus {width: 100%;}
+.Board .board-area .row-search .category::-ms-expand{display:none;}
+.ie8 .Board .board-area .row-search .category,
+.ie9 .Board .board-area .row-search .category {width: 100%;}
+.ie8 .Board .board-area .row-search .sltDiv:after,
+.ie9 .Board .board-area .row-search .sltDiv:after {display: none;}
+.Board .board-area .row-search .keword {text-align: left; margin: 0 8px; padding-left: 10px; width: 200px;}
+.Board .board-area .row-search .btn-search {padding: 0 30px; border-radius: 5px; background: #efefef;}
+
+
+/* 추억게시판 */
+
+/* 추억게시판 비주얼 영역 */
+.Board .subVisual.memory {background: #eee url(http://img.sokcho-central.co.kr/board/bg_visual.jpg) no-repeat center; background-size: cover;}
+
+/* 추억게시판 list */
+.Board .board-area.memory .tb-list col.nth-1 {width: 10%;}
+.Board .board-area.memory .tb-list col.nth-2 {width: 58%;}
+.Board .board-area.memory .tb-list col.nth-3 {width: 10%;}
+.Board .board-area.memory .tb-list col.nth-4 {width: 10%;}
+.Board .board-area.memory .tb-list col.nth-5 {width: 7%;}
+.Board .board-area.memory .tb-list tr.reply td a {text-indent: 15px;}
+.Board .board-area.memory .tb-list tr.reply td a .re {position: relative; top: -1px; display: inline-block; font-size: 15px; text-indent: 0; background: #898989; color: #fff; padding: 0 5px;}
+.Board .board-area.memory .area-1 {position: relative;}
+
+/* 추억게시판 read */
+.Board .board-area.memory .tb-list tr.post td {text-align: left; padding: 40px 60px 50px; font-size: 16px; line-height: 1.8;}
+.Board .board-area.memory .tb-list tr.post td img.exImg {display: block; margin: 0 auto;}
+
+/*수정 시 팝업*/
+.popWrapper#pwdWrapper {display: none;}
+.popWrapper,
+.drop-bg {position: fixed; left: 0; top: 0; width: 100%; height: 100%;}
+.drop-bg {background: rgba(0,0,0, 0.58);}
+.popWrapper .pop-password {position: absolute; background: #fff; width: 308px; height: 180px; left: 50%; margin-left: -154px; top: 50%; margin-top: -90px; font-size: 16px; box-sizing: border-box; border: 1px solid #111;}
+.popWrapper .pop-password .pop-header {}
+.popWrapper .pop-password .pop-header h2 {background: #c9c9c9; font-size: 20px; text-align: center; padding: 10px 0;}
+.popWrapper .pop-password .pop-header .btn-x {position: absolute; right: 0; top: 2px;display: inline-block; width: 42px; height: 42px;}
+.popWrapper .pop-password .pop-body {padding: 28px 20px; text-align: center;}
+.popWrapper .pop-password .pop-body .p-1 {text-align: center; letter-spacing: -0.7px;}
+.popWrapper .pop-password .pop-body .row-inp {margin-top: 12px;}
+.popWrapper .pop-password .pop-body .row-inp > * {height: 37px; display: inline-block; box-sizing: border-box; vertical-align: top; border: 1px solid #c9c9c9; font-size: 16px; color: #383838;}
+.popWrapper .pop-password .pop-body .row-inp .pwd {padding: 0 5px; width: 160px;}
+.popWrapper .pop-password .pop-body .row-inp .btn-ok {border-radius: 5px; padding: 0 25px; background: #efefef; min-width: 84px;}
+
+/*게시판 글쓰기*/
+.Board .board-area.memory .tb-write {width: 100%; border-top: 1px solid #3d3d3d; margin-top: 18px;}
+.Board .board-area.memory .tb-write col.nth-1 {width: 12%;}
+.Board .board-area.memory .tb-write col.nth-2 {width: 88%;}
+.Board .board-area.memory .tb-write tbody tr th,
+.Board .board-area.memory .tb-write tbody tr td {vertical-align: middle; border-bottom: 1px solid #d9d9d9;}
+.Board .board-area.memory .tb-write tbody tr th {font-size: 18px; background: #F2F2F2; text-align: center;}
+.Board .board-area.memory .tb-write tbody tr td {font-size: 16px; padding: 10px 12px;}
+.Board .board-area.memory .tb-write .appe-reset,
+.Board .board-area.memory .tb-write input[class*=w-] {border: 1px solid #c9c9c9; height: 37px; box-sizing: border-box;}
+.Board .board-area.memory .tb-write .w-1 {width: 200px;}
+.Board .board-area.memory .tb-write .w-2 {width: 280px;}
+.Board .board-area.memory .tb-write .w-full {width: 100%;}
+.Board .board-area.memory .tb-write tbody tr td textarea {width: 100%; height: 380px; padding: 25px; font-size: 16px; font-family: "NanumSquare", sans-serif; line-height: 1.5; resize: none; color: #383838; box-sizing: border-box; border-color: #c9c9c9;}
+
+/*파일박스 커스터마이징*/
+.filebox {position: relative; display: inline-block;}
+.filebox input[type="file"] {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip:rect(0,0,0,0); border: 0;
+}
+.filebox label, .filebox .upload-name {display: inline-block; box-sizing: border-box; font-size: 16px; height: 37px;}
+.filebox label {
+  width: 84px; text-align: center; line-height: 2.2em; margin-left: 2px; border-radius: 5px;
+  background-color: #efefef; cursor: pointer; border: 1px solid #c9c9c9;
+}
+/* named upload */
+.filebox .upload-name {
+  position: relative; padding-left: 10px;
+  color: #999;
+  text-align: left;
+  line-height: 2.7em; vertical-align: top; background-color: #fff; border: 1px solid #c9c9c9;
+  text-overflow: ellipsis;
+  -webkit-appearance: none; /* 네이티브 외형 감추기 */
+  -moz-appearance: none; appearance: none;
+}
+
+.Board .board-area.memory .tb-write tbody .tr-file td .row + .row {margin-top: 10px;}
+.Board .board-area.memory .tb-write .inp-reset {background: #efefef; border-radius: 5px; vertical-align: top; height: 37px; width: 84px; font-size: 16px; color: #383838; margin-left: 2px; cursor: pointer; display: none;}
+.Board .board-area.memory .tb-write .tr-secure .w-1 {margin: 0 10px;}
+.Board .board-area.memory .row-cause {text-align: center; margin-top: 25px;}

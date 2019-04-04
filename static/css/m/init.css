@@ -1,0 +1,359 @@
+@charset "utf-8";
+@import url(https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+body {font-family: 'NanumSquare', 'Malgun Gothic', sans-serif; letter-spacing: -0.5px; color: #434343;}
+img {max-width: 100%;}
+.wrapper {position: relative; box-sizing: border-box; max-width: 768px; margin: 0 auto;}
+
+/*-bxSlider 재정의-*/
+.bx-wrapper,
+.bx-wrapper .bx-viewport {position: relative; margin: 0 auto; border: none; box-shadow: none; background: none;}
+.bx-controls {display: none;}
+
+/* 공통 */
+.f-bd {font-weight: 700;}
+.f-bdr {font-weight: 800;}
+.c-blue {color: #008aff;}
+
+/* header */
+.header {z-index: 999; position: fixed; box-sizing: border-box; width: 100%; max-width: 768px; top: 0; left: auto;}
+.header .header-area {position: relative; box-sizing: border-box; width: 100%; margin: 0 auto;}
+.header .logo {position: relative; display: block; width: 100%; padding: 13px 0 9px; text-align: center; background: #ca0e0f;}
+.header .logo a {position: relative; display: inline-block; margin: 0 auto; text-align: left; color: #fff;}
+.header .logo a * {position: relative; vertical-align: middle; text-shadow: 3px 3px 4px rgba(10, 2, 4, 0.25);}
+.header .logo em {display: inline-block; margin-top: -3px; font-size: 23px; font-weight: 700; letter-spacing: -1px; line-height: 23px;}
+.header .logo .logo-txt {display: inline-block; margin-left: 7px; font-size: 12px; line-height: 12px; font-weight: 700; letter-spacing: -1px;}
+.header .logo .logo-txt span {display: block; margin: 1px 0 0 -6px; font-size: 10px; font-weight: 800; -webkit-transform: scale(0.9);}
+.header .gnb {position: relative; box-sizing: border-box; width: 100%; margin: 0 auto; padding: 8px 12px 6px; text-align: center; background: #950101;}
+.header .gnb .menu {display: inline-block; margin: 0 auto; text-align: left;}
+.header .gnb .menu li {float: left;}
+.header .gnb .menu li a {position: relative; display: block; padding: 0 6px 0 11px; font-size: 12px; font-weight: 700; line-height: 12px; color: #fff;}
+.header .gnb .menu li:first-child a {padding-left: 0;}
+.header .gnb .menu li:last-child a {padding-right: 0;}
+.header .gnb .menu li.on a {color: #ffe400;}
+.header .gnb .menu li a:before {content: ""; position: absolute; display: block; width: 6px; height: 6px; top:50%; left: 0; margin-top: -4px; border-radius: 100%; background: #fff;}
+.header .gnb .menu li:first-child a:before {content: none;}
+
+/* footer */
+.footer {position: relative; box-sizing: border-box; width: 100%; padding: 27px 0 25px; background: #575757;}
+.footer .footer-area {position: relative;  margin: 0 auto; text-align: center; color: #fff;}
+.footer .logo {display: block; font-size: 15px; font-weight: 700; line-height: 15px;}
+.footer .logo span {display: block; font-size: 10px; font-weight: 800; -webkit-transform: scale(0.7);}
+.footer .f-txt-box {}
+.footer .f-txt-box .p-0 {margin: 4px auto; font-size: 11px; line-height: 18px;}
+.footer .f-txt-box address {font-size: 10px; line-height: 16px;}
+.footer .f-txt-box address p {}
+.footer .f-txt-box address .p-1 {}
+.footer .f-txt-box address .p-2, .footer .f-txt-box address small {letter-spacing: -0.1px;}
+
+
+/* 메인, 푸드윈도 공통 타이틀 */
+.con-tit {position: relative; margin: 0 auto 13px; padding-left: 10px; letter-spacing: -0.9px;}
+.con-tit [class*=row-] {display: block; line-height: 1;}
+.con-tit .row-1 {font-size: 12px;}
+.con-tit .row-2 {font-size: 19px; margin: 2px 0 0 -1px;}
+.con-tit .sokcho {font-size: 10px; display: inline-block; text-indent: 2px; margin-left: 3px;}
+.con-tit:before {content: ""; position: absolute; top: 0; left: 0; display: inline-block; width: 3px; height: 100%; background: #c0c0c0; vertical-align: middle; margin-right: 10px;}
+
+/* 메인 */
+.Main section {position: relative;}
+
+/* 메인 비주얼 영역 */
+.Main .visual {position: relative; width: 100%; height: auto; background: rgba(0, 0, 0, 0.8);}
+.Main .visual .bg-visual {z-index: 1;}
+.Main .visual .slide {box-sizing: border-box; color: #fff; width: 100%; height: 100%; box-sizing: border-box;}
+.Main .visual .slide-1:before {background: #eee url(http://img.sokcho-central.co.kr/bg_visual_1.jpg) no-repeat center; background-size: cover;}
+.Main .visual .slide-2:before {background: #eee url(http://img.sokcho-central.co.kr/bg_visual_2.jpg) no-repeat center; background-size: cover;}
+.Main .visual .slide:before {content: ""; display: block; position: absolute; width: 100%; height: 100%; left: 0; top: 0;
+	-webkit-transition: all 5.5s 0.1s;
+	-ms-transition: all 5.5s 0.1s;
+	-o-transition: all 5.5s 0.1s;
+	transition: all 5.5s 0.1s;
+}
+.Main .visual .visual-txt-box {z-index: 10; position: absolute; box-sizing: border-box; width: 100%; height: 100%; top: 0; left: 0; margin: 0 auto; margin-top: 0; text-align: center; color: #fff;}
+.Main .visual .visual-txt {position: relative; box-sizing: border-box; width: 100%; top: 50%; left: 0; margin: 0 auto; margin-top: -96px;}
+.Main .visual .visual-txt p {position: relative;}
+.Main .visual .visual-txt h2, .Main .visual .visual-txt .p-1, .Main .visual .visual-txt .p-2 {text-shadow: 3px 3px 4px rgba(10, 2, 4, 0.29);}
+.Main .visual .visual-txt h2 {position: relative; margin: 5px auto 7px; font-size: 30px; line-height: 30px; letter-spacing: -1px;}
+.Main .visual .visual-txt h2 span {display: block; font-size: 36px; line-height: 36px;}
+.Main .visual .visual-txt .p-1 {font-size: 14px; font-weight: 700; line-height: 24px; letter-spacing: -1px;}
+.Main .visual .visual-txt .p-2 {display: inline-block; height: 22px; padding: 0 7px 0 9px; font-size: 10px; line-height: 22px; font-weight: 700; background: #c90e0e;}
+.Main .visual .visual-txt .p-3 {margin-top: 9px; font-size: 15px; line-height: 20px;}
+
+/* 메인 서브 공통영역 */
+.Main section[class*=scr-move] {box-sizing: border-box; margin: 0 auto; padding: 22px 17px 28px;}
+
+/* 속초중앙시장 소개 */
+.Main section.about {padding-bottom: 6px; background: #fffeed;}
+.Main .about .about-box {}
+.Main .about .about-box .about-img {position: relative; box-sizing: border-box; width: 100%; margin: 3px 0 10px;}
+.Main .about .about-box:first-child .about-img {margin-top: 0}
+.Main .about .about-box .about-img img {position: relative; width: 100%; border: 1px solid #bdbaae;}
+.Main .about .about-box .txt-box {position: relative; box-sizing: border-box; margin-bottom: 11px; line-height: 16px;}
+.Main .about .about-box .txt-box.last {}
+.Main .about .about-box .txt-box dt {margin-bottom: 5px; font-size: 16px; color: #c90e0e;}
+.Main .about .about-box .txt-box dd {font-size: 13px; word-break: keep-all;}
+
+/* 중앙시장 안내 */
+.Main section.guide {background: #fff;}
+.Main .guide .guide-box .guide-img img {position: relative; width: 100%;}
+.Main .guide .guide-box .txt-box {position: relative;}
+.Main .guide .guide-box .txt-box .txt-list {}
+.Main .guide .guide-box .txt-box .txt-list li {margin-top: 10px;}
+.Main .guide .guide-box .txt-box .txt-list li p {}
+.Main .guide .guide-box .txt-box .txt-list .list-tit {margin-bottom: 2px; padding-left: 16px; font-size: 15px; line-height: 18px; color: #c90e0e; background: url(http://img.sokcho-central.co.kr/m/ico_guide.png) no-repeat center left; background-size: auto 18px;}
+.Main .guide .guide-box .txt-box .txt-list .list-txt {font-size: 12px; line-height: 16px; word-break: keep-all;}
+
+/* 주변관광 안내 */
+.Main section.tourist {background: #f6f6f6;}
+.Main .tourist {}
+.Main .tourist .area {}
+.Main .tourist .area .h4-tit {position: relative; font-size: 15px; margin-top: 15px;}
+.Main .tourist .area .h4-tit:before {content: ""; display: inline-block; width: 5px; height: 14px; background: #c0c0c0; vertical-align: middle; margin-right: 4px;}
+.Main .tourist .tourist-box .area:first-child .h4-tit {margin-top: 10px;}
+.Main .tourist .area .list + .list {margin-top: 5px;}
+.Main .tourist .area .list > li {float: left; width: 48.6%; margin-left: 2.4%; margin-top: 15px; overflow: hidden;}
+.Main .tourist .area .list > li figure {border: 1px solid #a9a7a8; box-sizing: border-box;}
+.Main .tourist .area .list > li figure img {width: 100%;}
+.Main .tourist .area .list > li:first-child, .Main .tourist .area .list > li:nth-child(2) {margin-top: 5px;}
+.Main .tourist .area .list > li:nth-child(2n-1) {margin-left: 0;}
+.Main .tourist .area .list > .link-tour {cursor:pointer}
+.Main .tourist .area .list > li dl {margin-top: 7px; letter-spacing: -0.9px;}
+.Main .tourist .area .list > li dl dt {font-size: 12px; color: 0; padding-bottom: 5px; margin-bottom: 7px; border-bottom: 1px solid #c8c8c8; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.Main .tourist .area .list > li dl dt h5 {margin-bottom: 4px; font-size: 14px; color: #008ead; font-weight: 700;}
+.Main .tourist .area .list > li dl dd {font-size: 12px; color: #4c4c4c; line-height: 1.4; word-break: keep-all;}
+
+/* 속초8경, 고성8경 */
+.Main section.view {padding-bottom: 12px; background: #fff;}
+.Main .view .view-box + .view-box {margin-top: 15px;}
+.Main .view .view-box .tit {position: relative; margin: 0 auto 13px; padding-left: 10px; letter-spacing: -0.9px;}
+.Main .view .view-box .tit .sokcho {display: block; font-size: 12px; line-height: 1;}
+.Main .view .view-box .tit .sokcho span {font-size: 10px; display: inline-block; text-indent: 2px; margin-left: 3px;}
+.Main .view .view-box .tit .big {display: block; margin: 2px 0 0 -1px; font-size: 19px; line-height: 1;}
+.Main .view .view-box .tit:before {content: ""; position: absolute; top: 0; left: 0; display: inline-block; width: 3px; height: 100%; background: #c0c0c0; vertical-align: middle; margin-right: 10px;}
+
+.Main .view .view-box .map-txt,
+.Main .view .view-box .p-1 {font-size: 13px; line-height: 18px; text-align: center; margin: 10px 0 12px; word-break: keep-all;} 
+.Main .view .view-map {position:relative; overflow: hidden; width: 100%; margin: 0 auto 10px; box-sizing: border-box;}
+.Main .view .view-map img {width:100%}
+.Main .view .view-box:first-child {margin: 0 auto;}
+.Main .view .view-box:first-child .view-map {border: 1px solid #a29fa0; border-radius: 15px;}
+.Main .view .view-box .area {}
+.Main .view .view-box .area .list > li {margin-top: 5px;}
+.Main .view .view-box .area .list + .list {margin-top: 0px;}
+.Main .view .view-box .area .list > li {float: left; width: 48.6%; margin-top: 10px; overflow: hidden;}
+.Main .view .view-box .area .list > li:nth-child(2n) {margin-left: 1.2%;}
+.Main .view .view-box .area .list > li:nth-child(2n-1) {margin-right: 1.2%;}
+.Main .view .view-box .area .list > li .tour-img {box-sizing: border-box; text-align: center;}
+.Main .view .view-box .area .list > li dl {margin-top: 8px; letter-spacing: -0.9px;}
+.Main .view .view-box .area .list > li dl dt {color: 0; padding-bottom: 5px; margin-bottom: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.Main .view .view-box .area .list > li dl dt h5 {font-size: 14px; font-weight: 700; color: #000; text-align: center; padding-top: 1px;}
+.Main .view .view-box .area .list > li dl dt h5 .num {position: relative; top: -1px;background: #1d5e87; color: #fff; display: inline-block; width: 18px; height: 18px; border-radius: 50%; line-height: 1.6; vertical-align: middle; font-weight: 400; font-size: 13px;}
+.Main .view .view-box .area .list > li dl dd {overflow: hidden; position: relative; box-sizing: border-box; display: block; padding: 0 0 10px; font-size: 11.5px; color: #4c4c4c; line-height: 1.4; letter-spacing: -1px; word-wrap: break-word; word-break: keep-all; color: #4c4c4c;}
+.Main .view .view-box .row-btn {text-align: center;}
+.Main .view .view-box .row-btn .btn-more {display: inline-block; padding: 4px 9px; border-radius: 15px; font-size: 12.5px; background: #fff; border: 1px solid #4286b0; color: #165e88; }
+
+/* 오시는 길 */
+.Main section.waycome {padding-bottom: 41px; background: #f6f6f6;}
+.Main .waycome .con-area {position: relative; margin: 0 auto; text-align: center;}
+.Main .waycome .waycome-box {position: relative; display: inline-block; text-align: left;}
+.Main .waycome [class*=way-] {position: relative;}
+.Main .waycome .way-map {box-sizing: border-box; width: 100%;}
+.Main .waycome .way-map img {border: 1px solid #c9cacc; border-radius: 3px;}
+.Main .waycome .way-info {box-sizing: border-box; width: 100%;}
+.Main .waycome .way-info .p-1 {position: relative; margin-top: 15px; font-size: 15px; font-weight: 700; margin-bottom: 3px;}
+.Main .waycome .way-info .p-1:before {content: ""; display: inline-block; width: 5px; height: 15px; background: #c0c0c0; vertical-align: middle; margin-right: 6px; margin-top: -1px;}
+.Main .waycome .way-info dl {margin-top: 6px; font-size: 12px; line-height: 1.6; letter-spacing: -0.9px;}
+.Main .waycome .way-info dt, .contents .waycome .way-info dd {padding-left: 11px;}
+.Main .waycome .way-info dt {font-weight: 700;}
+.Main .waycome .way-info dd {word-break: keep-all;}
+.Main .waycome .way-info dd p.dot {position: relative; padding-left: 7px;}
+.Main .waycome .way-info dd p.dot:before {content: "-"; display: inline-block; position: absolute; left: 0;}
+.Main .waycome .way-info .row-btn {margin-top: 15px; text-align: center;}
+.Main .waycome .way-info .row-btn a {display: inline-block; width: 120px;}
+.Main .waycome .way-info .row-btn a:first-child {margin-right: 5px;}
+
+/* 푸드윈도 */
+.Food {}
+.Food .food-wrap {position: relative; box-sizing: border-box; margin: 0 auto; padding: 30px 15px 37px;}
+.Food .food-wrap .con-tit {margin-bottom: 0;}
+.Food .food-wrap .con-area {position: relative; box-sizing: border-box; margin: 0 auto;}
+.Food .food-wrap .food-list-box {}
+.Food .food-wrap .food-list-box .list {}
+.Food .food-wrap .food-list-box .list li {cursor: pointer; float: left; box-sizing: border-box; width: 49%; margin: 22px 0 0 2%; overflow: hidden;}
+.Food .food-wrap .food-list-box .list li:nth-child(2n-1) {margin-left: 0;}
+.Food .food-wrap .food-list-box .list li:first-child, .Food .food-wrap .food-list-box .list li:nth-child(2) {margin-top: 15px;}
+.Food .food-wrap .food-list-box .list li .tour-img {position: relative; box-sizing: border-box; text-align: center;}
+.Food .food-wrap .food-list-box .list li .tour-img img {position: relative; box-sizing: border-box; width: 100%; border:1px solid #a8a5a6; border-radius: 1px;}
+.Food .food-wrap .food-list-box .list li dl {margin-top: 7px; letter-spacing: -1px;}
+.Food .food-wrap .food-list-box .list li dl dt {padding-bottom: 9px; border-bottom: 1px solid #c9c9c9;}
+.Food .food-wrap .food-list-box .list li dl dt h5 {font-size: 14px; line-height: 14px; font-weight: 700; color: #000; text-align: left; color: #008ead;}
+.Food .food-wrap .food-list-box .list li dl dd {overflow: hidden; position: relative; display: block; padding-top: 9px;}
+.Food .food-wrap .food-list-box .list li dl dd p {/*min-height: 80px;*/ padding: 0 2px; font-size: 12px; line-height: 16px; word-wrap: break-word; word-break: keep-all; color: #4c4c4c;}
+.Food .food-wrap .food-list-box .list li dl dd .btn-link {position: relative; display: block; width: 100%; height: 30px; margin-top: 8px; font-size: 12px; font-weight: 700; text-align: center; line-height: 30px; color: #fff; background: #9db3c3;}
+
+
+/* 게시판 */
+.Board .subVisual, .board-area {position: relative; box-sizing: border-box; margin: 0 auto; padding: 0 12px 0;}
+/*.Board .board-box .tit {font-size: 34px;}
+.Board .board-box .tit .sokcho {text-transform: uppercase; font-size: 16px; display: block; text-indent: 2px; margin-bottom: 2px;}*/
+
+/* 게시판 비주얼 영역 */
+.Board .subVisual {padding-top: 50px; padding-bottom: 54px; box-sizing: border-box; color: #fff;}
+.Board .subVisual .mainTxt {text-align: center;}
+.Board .subVisual .mainTxt > * {text-shadow: 3px 3px 2px rgba(0,0,0, .25); letter-spacing: -0.7px;}
+.Board .subVisual .mainTxt .p-1 {font-size: 14px;font-weight: 700;}
+.Board .subVisual .mainTxt h2 {font-size: 25px; margin-top: 5px; letter-spacing: -2px; line-height: 1.2;}
+.Board .subVisual .mainTxt .p-2 {font-size: 10px; margin-top: 3px; -webkit-transform: scale(0.9);}
+
+/* 게시판 list */
+.Board .board-area {position: relative; box-sizing: border-box; min-height: 330px; padding-top: 20px; padding-bottom: 30px;}
+.Board .board-area {position: relative; box-sizing: border-box; width: 100%; margin: 0 auto;}
+.Board .board-area .tb-list {position: relative; width: 100%; font-size: 12px; table-layout: fixed;}
+.Board .board-area .tb-list col.nth-1 {width: 75%;}
+.Board .board-area .tb-list col.nth-2 {width: 25%;}
+.Board .board-area .tb-list th, .Board .board-area .tb-list td {padding: 10px 0px; text-align: center;}
+.Board .board-area .tb-list td {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.Board .board-area .tb-list td:nth-child(1) {text-align: left; padding-left: 5px;}
+.Board .board-area .tb-list thead tr {background: #f2f2f2; border-top: 1px solid #3c3b3b; border-bottom: 1px solid #d9d9d9;}
+.Board .board-area .tb-list tbody tr {border-bottom: 1px solid #d9d9d9;}
+.Board .board-area .pagenation {text-align: center; font-size: 0; margin-top: 20px;}
+.Board .board-area .pagenation a {display: inline-block; font-size: 12px; width: 24px; height: 24px; vertical-align: middle; line-height: 2em; border: 1px solid #d9d9d9; border-left: 0; color: #d2d2d2; font-family: "Nanum Gothic"; font-weight: 600; }
+.Board .board-area .pagenation a:nth-child(2) {border: 1px solid #d9d9d9;}
+.Board .board-area .pagenation a[class*="prev"], .Board .board-area .pagenation a[class*="next"] {font-size: 11px; line-height: 2.3em; letter-spacing: -2px;}
+.Board .board-area .pagenation a:hover, .Board .board-area .pagenation a.on {background: #d2d2d2; color: #fff;}
+.Board .board-area .pagenation a.prev, .Board .board-area .pagenation a.next {background: #d2d2d2; color: #595959;}
+.Board .board-area .pagenation a.prev {text-indent: -4px; margin-right: 5px;}
+.Board .board-area .pagenation a.next {text-indent: 1px; margin-left: 5px;}
+
+/* 게시판 read */
+.Board .board-area .tb-read {}
+.Board .board-area .tb-read th {padding: 10px 10px; font-size: 12.5px;}
+.Board .board-area .tb-read td {padding: 10px; font-size: 12.5px; line-height: 1.6; word-break: keep-all;}
+.Board .board-area .tb-read thead tr {border-top: 1px solid #3c3b3b; border-bottom: 1px solid #d9d9d9; background: #f2f2f2;}
+.Board .board-area .tb-read tbody tr {border-bottom: 1px solid #d9d9d9;}
+.Board .board-area .tb-read thead tr th .flt-r {float: right; margin-left: 5px;}
+.Board .board-area .row-btn {margin-top: 20px; text-align: center;}
+.Board .board-area .row-btn .btn-list {display: inline-block; font-size: 13px; border: 1px solid #d9d9d9; border-radius: 25px; padding: 5px 30px;}
+
+
+/* 추억게시판 */
+
+/* 추억게시판 비주얼 영역 */
+.Board .subVisual.memory {background: #eee url(http://img.sokcho-central.co.kr/m/board/bg_visual.jpg) no-repeat center; background-size: cover;}
+
+/* 추억게시판 list */
+.Board .board-area.memory .tb-list tr.reply td a {text-indent: 15px;}
+.Board .board-area.memory .tb-list tr.reply td a .re {position: relative; display: inline-block; font-size: 12px; text-indent: 0; background: #898989; color: #fff; padding: 0 5px;}
+.Board .board-area.memory .area-1 {}
+.Board .board-area.memory .area-1 .row-btn {}
+.Board .board-area.memory .area-1 .row-btn .left {float: left;}
+.Board .board-area.memory .area-1 .row-btn .right {float: right;}
+.Board .board-area.memory .area-1 [class*=btn-] {background: #fff; border: 1px solid #b0b0b0; line-height: 1; padding: 7px 14px; border-radius: 30px; font-size: 13px; color: #676767; letter-spacing: -1px; min-width: 68px;}
+.Board .board-area.memory .area-1 [class*=btn-]:first-child + button {margin-left: 1px;}
+.Board .board-area.memory .row-search {margin-top: 20px; text-align: center;}
+.Board .board-area.memory .row-search > * {position: relative; display: inline-block; height: 32px; border: 1px solid #c8c8c8; background: #fff; box-sizing: border-box; vertical-align: middle; padding: 0 5px; font-size: 12.5px; line-height: 1; font-family: "NanumSquare", sans-serif; vertical-align: top; border-radius: 2px; color: #383838;}
+.Board .board-area.memory .row-search .sltDiv {padding: 0; width: 70px; overflow: hidden;}
+.Board .board-area.memory .row-search .sltDiv:after {content: "▼"; position: absolute; right: 5px; top: 9px; color: #acacac; pointer-events: none;}
+.Board .board-area.memory .row-search .sltDiv .sltArr {}
+.Board .board-area.memory .row-search .category {position: absolute; left: 0; top: 0; padding-left: 5px; width: 100%; border: 0; font-size: 13px; height: 100%; width: 150px; color: #383838; background: #fff;}
+.Board .board-area.memory .row-search .category:focus {width: 100%;}
+.Board .board-area.memory .row-search .category::-ms-expand{display:none;}
+.Board .board-area.memory .row-search .keword {text-align: left; margin: 0 2px; padding-left: 10px; width: 90px;}
+.Board .board-area.memory .row-search .btn-search {padding: 0 12px; border-radius: 5px; background: #efefef;}
+.Board .board-area.memory .row-search .btn-write {border-radius: 20px; padding: 0 15px; margin-left: 5px;}
+
+/* 추억게시판 read */
+.Board .board-area .tb-list tr.post td {text-align: left; padding: 10px; font-size: 12.5px; line-height: 1.6;}
+.Board .board-area .tb-list tr.post td img.exImg {display: block; margin: 0 auto;}
+
+/* 수정 시 팝업 */
+.popWrapper#pwdWrapper {display: none;}
+.popWrapper,
+.drop-bg {position: fixed; left: 0; top: 0; width: 100%; height: 100%;}
+.drop-bg {background: rgba(0,0,0, 0.58);}
+.popWrapper .pop-password {position: absolute; background: #fff; width: 250px; left: 50%; margin-left: -125px; top: 50%; margin-top: -71px; font-size: 16px; box-sizing: border-box; border: 1px solid #111;}
+.popWrapper .pop-password .pop-header {}
+.popWrapper .pop-password .pop-header h2 {background: #c9c9c9; font-size: 16px; text-align: center; padding: 10px 0;}
+.popWrapper .pop-password .pop-header .btn-x {position: absolute; right: 0; top: 2px;display: inline-block; width: 32px; height: 40px;}
+.popWrapper .pop-password .pop-header .btn-x .a-x {top: 7px; right: 5px;}
+.popWrapper .pop-password .pop-header .btn-x .a-x:before, .popWrapper .pop-password .pop-header .btn-x .a-x:after {width: 17px;}
+.popWrapper .pop-password .pop-body {padding: 20px 20px; text-align: center; font-size: 13px;}
+.popWrapper .pop-password .pop-body .p-1 {text-align: center; letter-spacing: -0.7px;}
+.popWrapper .pop-password .pop-body .row-inp {margin-top: 12px;}
+.popWrapper .pop-password .pop-body .row-inp > * {height: 32px; display: inline-block; box-sizing: border-box; vertical-align: top; border: 1px solid #c9c9c9; font-size: 13px; color: #383838;}
+.popWrapper .pop-password .pop-body .row-inp .pwd {padding: 0 5px; width: 110px;}
+.popWrapper .pop-password .pop-body .row-inp .btn-ok {border-radius: 5px; padding: 0 15px; background: #efefef; min-width: 54px; margin-left: 2px;}
+
+/* 추억게시판 글쓰기 */
+.Board .board-area.memory .tb-write {width: 100%; border-top: 1px solid #3d3d3d; margin-top: 0px;}
+.Board .board-area.memory .tb-write col.nth-1 {width: 20%;}
+.Board .board-area.memory .tb-write col.nth-2 {width: 80%;}
+.Board .board-area.memory .tb-write tbody tr th,
+.Board .board-area.memory .tb-write tbody tr td {vertical-align: middle; border-bottom: 1px solid #d9d9d9;}
+.Board .board-area.memory .tb-write tbody tr th {font-size: 13px; background: #F2F2F2; text-align: center;}
+.Board .board-area.memory .tb-write tbody tr td {font-size: 12.5px; padding: 8px 5px;}
+.Board .board-area.memory .tb-write .appe-reset,
+.Board .board-area.memory .tb-write input[class*=w-] {border: 1px solid #c9c9c9; height: 32px; box-sizing: border-box;}
+.Board .board-area.memory .tb-write .w-1 {width: 100px;}
+.Board .board-area.memory .tb-write .w-2 {width: 100px;}
+.Board .board-area.memory .tb-write .w-full {width: 100%;}
+.Board .board-area.memory .tb-write tbody tr td textarea {width: 100%; height: 380px; padding: 10px; font-size: 12.5px; font-family: "NanumSquare", sans-serif; line-height: 1.5; resize: none; color: #383838; box-sizing: border-box; border-color: #c9c9c9;}
+
+/* 파일박스 커스터마이징 */
+.filebox {position: relative; display: inline-block;}
+.filebox input[type="file"] {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip:rect(0,0,0,0); border: 0;
+}
+.filebox label, .filebox .upload-name {display: inline-block; box-sizing: border-box; font-size: 12px; height: 32px;}
+.filebox label {
+  width: 58px; text-align: center; margin-left: 2px; border-radius: 5px; line-height: 32px;
+  background-color: #efefef; cursor: pointer; border: 1px solid #c9c9c9;
+}
+/* named upload */
+.filebox .upload-name {
+  position: relative; padding-left: 5px;
+  color: #999;
+  text-align: left;
+  line-height: 2.7em; vertical-align: top; background-color: #fff; border: 1px solid #c9c9c9;
+  text-overflow: ellipsis;
+  -webkit-appearance: none; /* 네이티브 외형 감추기 */
+  -moz-appearance: none; appearance: none;
+}
+
+.Board .board-area.memory .tb-write tbody .tr-file td .row + .row {margin-top: 10px;}
+.Board .board-area.memory .tb-write .inp-reset {background: #efefef; border-radius: 5px; vertical-align: top; height: 32px; width: 58px; font-size: 12px; color: #383838; margin-left: 2px; cursor: pointer; display: none; line-height: 32px;}
+.Board .board-area.memory .tb-write .tr-secure img {width: 68px;}
+.Board .board-area.memory .tb-write .tr-secure .w-1 {margin: 0 2px; padding-left: 5px; width: 70px;}
+.Board .board-area.memory .tb-write .tr-secure .s-1 {/*display: block;*/ font-size: 11px; letter-spacing: -0.7px;}
+.Board .board-area.memory .row-cause {text-align: center; margin-top: 25px; font-size: 12px; word-break: keep-all; letter-spacing: -0.9px;}
+
+
+@media (max-device-width: 320px) {
+    /* header */
+    .header .gnb .menu li a {padding: 0 4px 0 8px; font-size: 11px; line-height: 11px;}
+    .header .gnb .menu li a:before {width: 4px; height: 4px; margin-top: -3px;}
+
+    /* 메인 서브 공통영역 */
+    .Main .con-tit .row-2 {font-size: 18px;}
+    
+    /* 추억게시판 글쓰기 */
+    .Board .board-area.memory .tb-write .tr-secure .s-1 {font-size: 10px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
